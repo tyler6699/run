@@ -1,6 +1,8 @@
 <div id="smoothmenu" class="ddsmoothmenu">
-	<ul> 
-	  <li><%= link_to "Routes", routes_path %></li>
+	<ul>    
+	  <li><%= link_to "Profile", runner_path(current_user) %></li>  
+	  <li><%= link_to "Routes", routes_path %></li>  
+	  <li><%= link_to "Runners", runners_path %></li> 
 	</ul>   
 		<br style="clear: left" />    
 </div>

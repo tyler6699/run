@@ -1,0 +1,13 @@
+<h1>Listing Runners</h1>   
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+<% @runners.each do |runner| %>
+  <tr class="<%= cycle("odd", "even") %>">
+    <td><%= runner.name %></td>
+    <td><%= runner.email %></td>
+  </tr>
+<% end %>
+</table>

@@ -1,4 +1,5 @@
-class SessionsController < ApplicationController
+class SessionsController < ApplicationController    
+
   def new
   end
   
@@ -16,5 +17,6 @@ class SessionsController < ApplicationController
   def destroy
     session[:runner_id] = nil
     redirect_to root_url, :notice => "Logged out!"
-  end
+  end     
+ 
 end 

@@ -1,4 +1,4 @@
-class RoutesController < ApplicationController
+class RoutesController < RestrictedController
   def index
     @routes = Route.all
   end

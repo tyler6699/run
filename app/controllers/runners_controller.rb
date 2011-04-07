@@ -1,4 +1,9 @@
-class RunnersController < ApplicationController
+class RunnersController < ApplicationController     
+  
+  def index
+    @runners = Runner.all
+  end
+  
   def new
     @runner = Runner.new
   end
