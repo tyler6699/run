@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110407205526) do
+ActiveRecord::Schema.define(:version => 20110407215807) do
 
   create_table "routes", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(:version => 20110407205526) do
     t.string   "url"
     t.integer  "distance"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "runners", :force => true do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

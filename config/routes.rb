@@ -1,5 +1,6 @@
 Runtracker::Application.routes.draw do
-  resources :routes
+  resources :routes  
+  resources :runners
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
