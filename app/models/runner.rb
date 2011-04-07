@@ -1,4 +1,6 @@
+ require 'bcrypt'   
 class Runner < ActiveRecord::Base
+ 
   attr_accessible :email, :password, :password_confirmation
   
   attr_accessor :password
@@ -9,7 +11,7 @@ class Runner < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email
   
-  def self.authenticate(email, password)
+  def self.authenticate(email, password)      
     runner = find_by_email(email)
     if runner && runner.password_hash == BCrypt::Engine.hash_secret(password, runner.password_salt)
       runner
