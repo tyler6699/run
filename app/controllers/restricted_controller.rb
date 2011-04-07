@@ -3,7 +3,7 @@ class RestrictedController < ApplicationController
   private   
   def authenticate
     if current_user.blank?
-      redirect_to log_in_path
+      redirect_to new_session_path
     end  
   end
 end         
