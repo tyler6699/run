@@ -1,0 +1,288 @@
+.tooltip_body
+{
+width:300px;	
+background-color:#FFFFFF;
+padding: 5px;
+margin-left: 20px;
+border-left: 1px solid #000;
+border-bottom: 1px solid #000;
+border-right: 1px solid #000;
+}
+
+.tooltip_head
+{
+width:300px;	
+background-color:#414141;
+color:#FFF;
+padding: 5px;
+font-weight: bold;
+margin-left: 20px;
+border-left: 1px solid #000;
+border-right: 1px solid #000;	
+}
+
+input[type=checkbox], input[type=radio]
+{
+    display: inline;
+    margin-right:5px;
+}
+
+label
+{
+ font-weight: bold;  
+}
+                                          
+.summary 
+{
+	background:#D8EDFF none repeat scroll 0 0;
+	border:1px solid #93CCFF;
+	margin-bottom:10px;
+	width:100%;
+} 
+
+.summary h1 
+{                   
+	color:#2D75B5; 
+	font-size:14px; 
+	line-height:1.2em;
+	margin-bottom:0.3em; 
+	padding:5px;
+}
+
+.fullwidthtextarea
+{
+	width: 650px;
+	height: 100px;
+}     
+
+textarea {
+	padding: 2px;
+	margin-bottom:10px; 
+}
+
+/* ---------- CoursePropNav ---------- */
+
+#CoursePropNav {
+/*	width: 22%;*/
+}
+
+#CoursePropNav ul {
+	list-style-type:none;
+}
+
+#CoursePropNav ul li,
+#CoursePropNav ul li.selected 
+{
+	border-left-width: 1px;
+	border-left-style: solid;
+	padding: 0.5em 0em 0.5em 1em;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+
+
+#CoursePropNav ul li.selected ul.nested li
+{
+	margin-top: 0.5em;
+	padding-bottom: 0em;
+}
+
+
+#CoursePropNav ul li.selected ul.nested li,
+#CoursePropNav ul li.selected ul.nested li.selected,
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li,
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected,
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected ul.nested li,
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected ul.nested li.selected
+{
+	border-left: none;
+	border-right: none;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+
+
+#CoursePropNav ul li.selected ul.nested li,
+#CoursePropNav ul li.selected ul.nested li.selected,
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li,
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected,
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected ul.nested li,
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected ul.nested li.selected
+{
+        background:url('/generic/images/arrowLinksmall.gif') no-repeat 11px 10px;
+}
+
+/* new */
+
+#CoursePropNav li a {
+	display:block;
+}
+
+#CoursePropNav ul li a
+{           
+	padding:6px 0;
+} 
+
+#CoursePropNav ul li,
+#CoursePropNav ul li.selected,
+#CoursePropNav ul li.selected ul.nested li,
+{
+	padding-top: 0px;
+	padding-bottom: 0px;   
+	background:#fff;
+}
+
+#CoursePropNav ul li.selected ul.nested li a,
+#CoursePropNav ul li.selected ul.nested li.selected a
+{
+	padding-left: 22px;   
+}
+
+#CoursePropNav ul li.selected ul.nested li.selected a
+{
+	margin-left: -23px;
+}
+
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li a
+{
+        padding-left: 66px; 
+        margin-left: 10px;
+}
+
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected a
+{
+	padding-left: 50px;
+}
+
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected a
+{
+	margin-left: -35px;
+}
+
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected ul.nested li a,
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected ul.nested li.selected a
+{
+	padding-left: 59px;
+}
+
+#CoursePropNav ul li.selected ul.nested li.selected ul.nested li.selected ul.nested li.selected a
+{
+	margin-left: -43px;   
+	background: #fff;
+}
+
+#CoursePropNav ul li
+{
+/*	padding-left: 0px;*/
+}
+
+#CoursePropNav ul li.selected a
+{
+/*	margin-left: -11px;*/
+}     
+#CoursePropNav ul li a, #CoursePropNav ul li.selected ul li a, #CoursePropNav ul li.selected ul li.selected ul li a, #CoursePropNav ul li.selected ul li.selected ul li.selected ul li a {
+color:#555555;
+}      
+#CoursePropNav ul li.last {
+border-bottom:1px solid #2D75B5;   
+}   
+
+#CoursePropNav ul li.selected {  
+	padding:11px 10px;
+	color:#fff;
+	font-weight:bold;
+/*border-bottom:1px solid #D1CBC4;   */
+} 
+#CoursePropNav ul li a:hover, #CoursePropNav ul li ul li a:hover, #CoursePropNav ul li.selected ul li a:hover, #CoursePropNav ul li ul li ul li a:hover, #CoursePropNav ul li.selected ul li.selected ul li a:hover, #CoursePropNav ul li ul li ul li ul li a:hover, #CoursePropNav ul li.selected ul li.selected ul li.selected ul li a:hover {
+color:#E31C18;
+}
+#CoursePropNav ul li.selected a, #CoursePropNav ul li.selected ul li.selected a, #CoursePropNav ul li.selected ul li.selected ul li.selected a, #CoursePropNav ul li.selected ul li.selected ul li.selected ul li.selected a {
+color:#E31C18;
+}
+#CoursePropNav ul li {
+border-left-color:#2D75B5;
+}      
+#CoursePropNav ul li.selected a {
+color:#fff;
+}
+#CoursePropNav ul li.selected {   
+
+border-left-color:#2D75B5;  
+background:none repeat scroll 0 0 #2D75B5;
+o
+}
+#CoursePropNav ul li, #CoursePropNav ul li.selected {
+border-right-color:#93CCFF;
+border-top-color:#93CCFF;
+} 
+
+#CoursePropNav ul li.selected ul.nested li.nestedselected {   
+   background:#D8EDFF;
+}     
+
+#CoursePropNav ul li.selected ul.nested li{   
+   background:#FFF;
+} 
+
+.nextprevlinks{
+	float:right;
+	margin-right:225px;
+	margin-top:-30px;
+}                       
+
+.nextprevlinks a {
+	padding: 5px; 
+} 
+
+.pdflink, .xlslink{
+	margin-top:30px;
+	padding:5px 5px 5px 24px;
+	color:#2D75B5;
+	font-weight:bold;    
+	border:1px solid #93CCFF;
+	font-size:1em;
+	text-decoration:none;     
+}   
+
+.pdflink {
+	background: url(/images/pdf_icon.gif) no-repeat 2px center #fff;  
+} 
+
+.pdflink:hover { 
+	background: url(/images/pdf_icon.gif) no-repeat 2px center #ededed;
+	margin-top:30px;
+	padding:5px 5px 5px 24px;
+	color:#2D75B5;
+}  
+
+.xlslink{
+	background: url(/images/excel.png) no-repeat 2px center #fff;
+} 
+
+.xlslink:hover { 
+	background: url(/images/excel.png) no-repeat 2px center #ededed;
+	margin-top:30px;
+	padding:5px 5px 5px 24px;
+	color:#2D75B5;
+}
+
+.info{                            
+	background:url("/images/icons/24x24/PNG/info.png") no-repeat scroll 2px 2px #EEEEEE;
+	border:1px solid lightSteelBlue;
+	margin-bottom:10px;
+	padding:5px 5px 5px 35px; 
+}   
+
+.updated{
+	background:url("/images/notice.png") no-repeat scroll 2px 2px #E7FFDF;
+	border:1px solid #73B65A;
+	font-weight:bold;
+	padding:5px 5px 5px 30px;
+}
+
+#validate{
+	margin-bottom: 5px;
+}

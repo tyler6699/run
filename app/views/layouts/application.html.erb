@@ -1,14 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Runtracker</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head> 
+    <title>
+      Just Run
+    </title> 
+<%= javascript_include_tag :all %>  
+    <link href='/stylesheets/reset-fonts.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/text.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/960.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/layout.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/icis.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/admin.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/tables.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/dropdownmenu.css' media='screen' rel='stylesheet' type='text/css' />  
+    <link href='/stylesheets/autocomplete.css' media='screen' rel='stylesheet' type='text/css' />  
+    <%= csrf_meta_tag %>
+  </head>
 <body>
+  <div class='container_12'>
 
-<%= yield %>
+    <div class='grid_12 header'>
+      <%= render :partial => 'layouts/user_bar' %>
+      <h1 id='branding'>
+        Run Tracker
+      </h1>
+      <%= render :partial => '/menus/main' %>
+    </div>
+    <div class='clear'></div>
+    <div class='grid_12'>
+      <% if flash[:notice] %><div id="notice" class="flashBox"><%= flash[:notice] %></div><% end %>   
+      <% if flash[:warning] %><div id="notice" class="flashBox"><%= flash[:warning] %></div><% end %>   
+      <%= yield %>
+    </div>
 
-</body>
-</html>
+    <div class='clear'></div>
+    <div class='grid_12' id='site_info'>
+
+      <p class='box'>
+        &copy; Run Tracker
+      </p>
+    </div>
+    <div class='clear'></div>
+  </div>
+</body> 
+</html> 
