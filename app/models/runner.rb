@@ -1,7 +1,7 @@
 require 'bcrypt'   
 class Runner < ActiveRecord::Base
   validates_presence_of :name, :on => :create   
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation, :name
   
   attr_accessor :password
   before_save :encrypt_password
