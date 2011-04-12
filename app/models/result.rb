@@ -1,2 +1,3 @@
-class Result < ActiveRecord::Base
+class Result < ActiveRecord::Base    
+  belongs_to :runner
 end
