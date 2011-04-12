@@ -2,7 +2,10 @@
 	<ul>    
 	  <li><%= link_to "Profile", runner_path(current_user) unless current_user.blank? %></li>  
 	  <li><%= link_to "Routes", routes_path %></li>  
-	  <li><%= link_to "Runners", runners_path %></li> 
+	  <li><%= link_to "Runners", runners_path %></li>  
+	  <% if current_user.role.name == 'Admin' %> 
+	    <li><%= link_to "Roles", roles_path %></li> 
+	  <% end %>
 	</ul>   
 		<br style="clear: left" />    
 </div>

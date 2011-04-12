@@ -1,5 +1,7 @@
 require 'bcrypt'   
-class Runner < ActiveRecord::Base
+class Runner < ActiveRecord::Base      
+  belongs_to :role
+  
   validates_presence_of :name, :on => :create   
   attr_accessible :email, :password, :password_confirmation, :name
   
@@ -10,7 +12,6 @@ class Runner < ActiveRecord::Base
   validates_presence_of :password, :on => :create  
   validates_presence_of :email
   validates_uniqueness_of :email    
-  
   
   def self.authenticate(email, password)      
     runner = find_by_email(email)

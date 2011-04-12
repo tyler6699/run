@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Runner:</b>
+  <%= @result.runner_id %>
+</p>
+
+<p>
+  <b>Route:</b>
+  <%= @result.route_id %>
+</p>
+
+<p>
+  <b>Custom distance:</b>
+  <%= @result.custom_distance %>
+</p>
+
+<p>
+  <b>Time minutes:</b>
+  <%= @result.time_minutes %>
+</p>
+
+<p>
+  <b>Date of run:</b>
+  <%= @result.date_of_run %>
+</p>
+
+<p>
+  <b>Effort:</b>
+  <%= @result.effort %>
+</p>
+
+
+<%= link_to 'Edit', edit_result_path(@result) %> |
+<%= link_to 'Back', results_path %>

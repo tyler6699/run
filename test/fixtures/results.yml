@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  runner_id: 1
+  route_id: 1
+  custom_distance: 1
+  time_minutes: 1
+  date_of_run: 2011-04-12
+  effort: 1
+
+two:
+  runner_id: 1
+  route_id: 1
+  custom_distance: 1
+  time_minutes: 1
+  date_of_run: 2011-04-12
+  effort: 1

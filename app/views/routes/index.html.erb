@@ -2,24 +2,30 @@
 <p><%= link_to 'New Route', new_route_path, :class => "addlink" %></p>    
 <table>
   <tr>
-    <th>Name</th>
+    <th>Name</th>    
+    <th>Creator</th>
     <th>Location</th>
     <th>Url</th>
     <th>Distance (m)</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th></th> 
+    <% if current_user.role.name == 'Admin' %>  
+      <th></th>
+      <th></th>
+    <% end %>
   </tr>
 
 <% @routes.each do |route| %>
   <tr class="<%= cycle("odd", "even") %>">
     <td><%= route.name.to_s %></td>
+    <td><%= find_user(route.runner_id) %></td>
     <td><%= route.location %></td>
     <td><%= route.url %></td>
     <td><%= route.distance %></td>
-    <td class="view"><%= link_to 'Show', route %></td>
-    <td class="edit"><%= link_to 'Edit', edit_route_path(route) %></td>
-    <td class="delete"><%= link_to 'Destroy', route, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="view"><%= link_to 'Show', route %></td>  
+    <% if current_user.role.name == 'Admin' %>  
+      <td class="edit"><%= link_to 'Edit', edit_route_path(route) %></td>
+      <td class="delete"><%= link_to 'Destroy', route, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% end %>
   </tr>
 <% end %>
 </table>

@@ -16,7 +16,8 @@ class RoutesController < RestrictedController
   end
 
   def create
-    @route = Route.new(params[:route])
+    @route = Route.new(params[:route])     
+    @route.runner_id = current_user
     
     if @route.save
       redirect_to(@route, :notice => 'Route was successfully created.')  

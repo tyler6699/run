@@ -1,4 +1,4 @@
-class RunnersController < ApplicationController     
+class RunnersController < RestrictedController     
   
   def index
     @runners = Runner.all
@@ -9,7 +9,8 @@ class RunnersController < ApplicationController
   end
   
   def create
-    @runner = Runner.new(params[:runner])
+    @runner = Runner.new(params[:runner]) 
+    @runner.role_id = 2
     if @runner.save
       redirect_to root_url, :notice => "Signed up!"
     else
