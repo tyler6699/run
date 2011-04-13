@@ -10,11 +10,15 @@ class ResultsController < ApplicationController
   end
 
   def new   
-    @result = Result.new
+    @result = Result.new   
+    @effort = []
+    20.downto(0) {|i| @effort<< i*5 }         
   end
 
   def edit
-    @result = @runner.results.find(params[:id])
+    @result = @runner.results.find(params[:id]) 
+    @effort = []
+    20.downto(0) {|i| @effort<< i*5 }       
   end
 
   def create

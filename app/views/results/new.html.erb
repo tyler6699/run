@@ -1,5 +1,6 @@
-<h1>New result</h1>
+<h1>Log a Run</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', runner_results_path %>
+<p>
+  <%= link_to 'Back to Profile', runner_path(@current_user), :class => 'backlink'%>
+</p>

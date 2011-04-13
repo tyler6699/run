@@ -553,5 +553,93 @@ padding:15px
 	/*-moz-border-radius: 8px;*/      
 	border: 0.5px solid #2D75B5;
 	span:100%;
+}     
+
+.dateselect {
+	display:inline-block;
 }
- 
+      
+.mmf_quality_great, .mmf_quality_good, .mmf_quality_ok, .mmf_quality_bad, .mmf_quality_worst {
+background-color:transparent;
+background-image:url(/images/mmf_button_icons_sprite.png);
+background-repeat:no-repeat;
+cursor:pointer;
+float:left;
+height:34px;
+width:34px;
+}
+.mmf_quality_great {
+background-position:0 -253px;
+}
+.mmf_quality_good {
+background-position:-35px -253px;
+}
+.mmf_quality_ok {
+background-position:-68px -253px;
+}
+.mmf_quality_bad {
+background-position:-101px -253px;
+}
+.mmf_quality_worst {
+background-position:-135px -253px;
+}
+.mmf_quality_great:hover, .mmf_quality_great_picked {
+background-position:0 -216px;
+}
+.mmf_quality_good_hover, .mmf_quality_good_picked {
+background-position:-35px -216px;
+}
+.mmf_quality_ok_hover, .mmf_quality_ok_picked {
+background-position:-68px -216px;
+}
+.mmf_quality_bad_hover, .mmf_quality_bad_picked {
+background-position:-101px -216px;
+}
+.mmf_quality_worst_hover, .mmf_quality_worst_picked {
+background-position:-135px -216px;
+}
+.mmf_weather_hot, .mmf_weather_cold, .mmf_weather_snowing, .mmf_weather_raining, .mmf_weather_cloudy, .mmf_weather_sunny {
+background-color:transparent;
+background-image:url(/images/mmf_button_icons_sprite.png);
+background-repeat:no-repeat;
+cursor:pointer;
+float:left;
+height:34px;
+width:34px;
+}
+.mmf_weather_hot {
+background-position:-49px -294px;
+}
+.mmf_weather_cold {
+background-position:-83px -294px;
+}
+.mmf_weather_snowing {
+background-position:-122px -294px;
+}
+.mmf_weather_raining {
+background-position:-160px -294px;
+}
+.mmf_weather_cloudy {
+background-position:-200px -294px;
+}
+.mmf_weather_sunny {
+background-position:-235px -294px;
+}
+.mmf_weather_hot_hover, .mmf_weather_hot_picked {
+background-position:-49px -328px;
+}
+.mmf_weather_cold_hover, .mmf_weather_cold_picked {
+background-position:-83px -328px;
+}
+.mmf_weather_snowing_hover, .mmf_weather_snowing_picked {
+background-position:-122px -328px;
+}
+.mmf_weather_raining_hover, .mmf_weather_raining_picked {
+background-position:-160px -328px;
+}
+.mmf_weather_cloudy_hover, .mmf_weather_cloudy_picked {
+background-position:-200px -328px;
+}
+.mmf_weather_sunny_hover, .mmf_weather_sunny_picked {
+background-position:-235px -328px;
+}

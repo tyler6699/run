@@ -1,3 +1,43 @@
+<style>
+	#demo-frame > div.demo { padding: 10px !important; };
+	</style>
+	<script>
+	$(function() {
+		$( "#slider" ).slider({
+			value:1,
+			min: 1,
+			max: 5,
+			step: 1,
+			slide: function( event, ui ) {
+        var val = ui.value;  
+			  switch (val)
+        {
+          case 1:
+            result = "Great"
+            break
+          case 2:
+            result = "Good" 
+            break
+          case 3:
+            result = "O.K" 
+            break
+          case 4:
+            result = "Bad" 
+            break
+          case 5:
+            result = "Worse" 
+            break
+        }    
+        $( "#amount" ).val( result );                  
+				document.getElementById ("result_feelings").value = ui.value
+			}
+		});  
+		document.getElementById ("result_feelings").value = $( "#slider" ).slider( "value" );
+		$( "#amount" ).val( "Great" );   
+	});
+	</script>
+
+
 <%= form_for([current_user,@result]) do |f| %>  
   <% if @result.errors.any? %>
     <div id="error_explanation">
@@ -23,17 +63,17 @@
     <%= f.label :time_minutes %><br />
     <%= f.text_field :time_minutes %>
   </div>
-  <div class="field">
+  <div class="dateselect">
     <%= f.label :date_of_run %><br />
-    <%= f.date_select :date_of_run %>
+    <%= f.date_select :date_of_run, {},html_options = {:class => "dateselect"} %> 
   </div>
   <div class="field">
     <%= f.label :effort %><br />
-    <%= f.text_field :effort %>
+    <%= f.select :effort, @effort %>   
   </div>   
   <div class="field">
     <%= f.label :time %><br />
-    <%= f.time_select :time %>  
+    <%= f.time_select :time,{},html_options = {:class => "dateselect"} %>  
   </div>  
   <div class="field">
     <%= f.label :weather %><br />
@@ -41,14 +81,19 @@
   </div>  
     <div class="field">
     <%= f.label :feelings %><br />
-    <%= f.text_field :feelings %>
+    <%= f.text_field :feelings, :type => 'hidden' %> 
+    <p>
+	    <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;" />
+    </p>
+    <div id="slider" style="width:100px; margin:10px;"></div> 
   </div>  
-  <div class="field">
+ 
+  <div class="field"> 
     <%= f.label :exercise_id %><br />
     <%= f.text_field :exercise_id %>
   </div>
-               
+            
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save', :class=>'savelink' %>
   </div>
 <% end %>

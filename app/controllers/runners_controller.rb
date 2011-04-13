@@ -6,6 +6,10 @@ class RunnersController < RestrictedController
   
   def new
     @runner = Runner.new
+  end   
+  
+  def show 
+    @runner = Runner.find(params[:id])
   end
   
   def create
