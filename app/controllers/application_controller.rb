@@ -8,12 +8,16 @@ class ApplicationController < ActionController::Base
     @current_user ||= Runner.find(session[:runner_id]) if session[:runner_id]
   end   
   
-  def check_role(role_name)
+  def check_role(role_name) 
+    begin
     if current_user.role.name == role_name.to_s
       return true
     else
       redirect_to runner_path(current_user) 
-    end
+    end    
+  rescue  
+    redirect_to runner_path(current_user) 
+  end
   end           
        
 end
