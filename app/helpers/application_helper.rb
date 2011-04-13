@@ -11,6 +11,18 @@ module ApplicationHelper
     else
       return ''
     end
-  end        
+  end   
+  
+    def check_role(role_name) 
+    begin
+      if current_user.role.name == role_name.to_s
+        return true
+      else
+        redirect_to runner_path(current_user) 
+      end    
+    rescue  
+      redirect_to runner_path(current_user) 
+    end
+  end             
   
 end

@@ -3,7 +3,7 @@
 	  <li><%= link_to "Profile", runner_path(current_user) unless current_user.blank? %></li>  
 	  <li><%= link_to "Routes", routes_path %></li>  
 	  <li><%= link_to "Runners", runners_path %></li>  
-	  <% if !current_user.blank? and current_user.role.name == 'Admin' %> 
+	  <% if check_role('Admin') %> 
 	    <li><%= link_to "Roles", roles_path %></li> 
 	  <% end %>
 	</ul>   

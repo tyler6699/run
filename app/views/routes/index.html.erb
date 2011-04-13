@@ -22,10 +22,10 @@
     <td><%= route.url %></td>
     <td><%= route.distance %></td>
     <td class="view"><%= link_to 'Show', route %></td>  
-     
+    <% if check_role('Admin') %>  
       <td class="edit"><%= link_to 'Edit', edit_route_path(route) %></td>
       <td class="delete"><%= link_to 'Destroy', route, :confirm => 'Are you sure?', :method => :delete %></td>
-
+    <% end %>
   </tr>
 <% end %>
 </table>
