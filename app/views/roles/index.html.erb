@@ -9,7 +9,7 @@
   <tr class="<%= cycle("odd", "even") %>">
     <td><%= runner.name %></td>
     <td><%= runner.email %></td>  
-    <td><%= runner.role.name %></td>  
+    <td><%= runner.role.name unless runner.role.blank? %></td>  
   </tr>
 <% end %>
 </table>     
