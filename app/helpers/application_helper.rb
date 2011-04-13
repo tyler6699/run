@@ -18,10 +18,10 @@ module ApplicationHelper
       if current_user.role.name == role_name.to_s
         return true
       else
-        redirect_to runner_path(current_user) 
+        return false
       end    
     rescue  
-      redirect_to runner_path(current_user) 
+      return false
     end
   end             
   
