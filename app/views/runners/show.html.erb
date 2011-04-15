@@ -1,4 +1,10 @@
-<h1>My Profile</h1>   
-<p>
-  <%= link_to 'Log a Run', new_runner_result_path(@runner), :class => 'addlink' %>     
-</p>
+<h1>Profile</h1>   
+     
+<div class="grid_6 alpha">
+  <%= render :partial => 'favorites' %>  
+</div>        
+<div class="grid_6 omega">
+  <%= render :partial => 'results' %>  
+</div>   
+<div class="clear"></div>
+<%= render :partial => 'myroutes' %>  

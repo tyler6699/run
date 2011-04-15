@@ -527,7 +527,8 @@ margin:2px;
 padding:4px 6px;
 }   
 
-.userdetails {
+.userdetails {  
+margin:15px 2px 0 0; 
 float: right;	
 padding: 10px;
 background-color: #D8EDFF;  
@@ -547,7 +548,7 @@ padding:15px
 	color: red;
 	font-size: 1.2em;
 	float: right;	
-	padding: 10px;
+	padding: 10px;     
 	background-color: #D8EDFF;  
 	/*-webkit-border-radius: 8px;*/    
 	/*-moz-border-radius: 8px;*/      

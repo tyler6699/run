@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110413000032) do
+ActiveRecord::Schema.define(:version => 20110414222257) do
+
+  create_table "favorites", :force => true do |t|
+    t.integer  "runner_id"
+    t.integer  "route_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "results", :force => true do |t|
     t.integer  "runner_id"

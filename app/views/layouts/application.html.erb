@@ -4,16 +4,20 @@
     <title>
       Just Run
     </title> 
-<%= javascript_include_tag :all %>  
-    <link href='/stylesheets/reset-fonts.css' media='screen' rel='stylesheet' type='text/css' />
+<%= javascript_include_tag :all %>       
+<script type="text/javascript">
+  $.noConflict();
+  // Code that uses other library's $ can follow here.
+</script>
+    <link href='/stylesheets/reset-fonts.css' media='screen' rel='stylesheet' type='text/css' />  
+    <link href='/stylesheets/tables.css' media='screen' rel='stylesheet' type='text/css' />  
     <link href='/stylesheets/text.css' media='screen' rel='stylesheet' type='text/css' />
     <link href='/stylesheets/960.css' media='screen' rel='stylesheet' type='text/css' />
     <link href='/stylesheets/layout.css' media='screen' rel='stylesheet' type='text/css' />
     <link href='/stylesheets/icis.css' media='screen' rel='stylesheet' type='text/css' />
     <link href='/stylesheets/admin.css' media='screen' rel='stylesheet' type='text/css' />
-    <link href='/stylesheets/tables.css' media='screen' rel='stylesheet' type='text/css' />
     <link href='/stylesheets/dropdownmenu.css' media='screen' rel='stylesheet' type='text/css' />  
-    <link href='/stylesheets/autocomplete.css' media='screen' rel='stylesheet' type='text/css' />  
+    <link href='/stylesheets/autocomplete.css' media='screen' rel='stylesheet' type='text/css' />      
     <%= csrf_meta_tag %>
   </head>
 <body>

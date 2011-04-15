@@ -2,6 +2,8 @@ require 'bcrypt'
 class Runner < ActiveRecord::Base      
   belongs_to :role    
   has_many :results
+  has_many :favorites
+  has_many :routes
   
   validates_presence_of :name, :on => :create   
   attr_accessible :email, :password, :password_confirmation, :name

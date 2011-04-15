@@ -20,7 +20,7 @@ tfoot td {
 
 /* adding icons */
 
-td.send a, td.view a, td.add a, td.delete a, td.edit a {
+td.send a, td.view a, td.add a, td.delete a, td.edit a, td.fav a {
 	border-bottom: none;
 	display: block;
 	position: relative;
@@ -45,6 +45,10 @@ td.delete a{
 }
 td.edit a{
 	background: url(/images/icons/16x16/PNG/Edit.png) no-repeat center center;
+}          
+
+td.fav a{
+	background: url(/images/icons/16x16/PNG/FavouriteAdd.png) no-repeat center center;
 }
 
 

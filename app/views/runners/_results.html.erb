@@ -1,0 +1,26 @@
+<h4>Recent Results</h4>  
+<p>
+  <%= link_to 'Log a Run', new_runner_result_path(@runner), :class => 'addlink' %>     
+</p>      
+
+<table>
+  <tr>
+    <th>Distance</th>
+    <th>Time</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @results.each do |result| %>
+  <tr class="<%= cycle("odd", "even") %>">
+    <td><%= result.custom_distance %></td>
+    <td><%= result.time_minutes %></td>
+    <td><%= result.date_of_run %></td>
+    <td class="view"><%= link_to 'Show', runner_result_path(@runner,result) %></td>
+    <td class="edit"><%= link_to 'Edit', edit_runner_result_path(@runner,result) %></td>
+    <td class="delete"><%= link_to 'Destroy', runner_result_path(@runner,result), :confirm => 'Are you sure?', :method => :delete %></td>     
+  </tr>
+<% end %>
+</table>                              

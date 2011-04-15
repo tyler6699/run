@@ -1,13 +1,12 @@
-<h1>Listing Routes</h1>
+<h4>My Routes</h4>
 <p><%= link_to 'New Route', new_route_path, :class => "addlink" %></p>    
 <table>
   <tr>
     <th>Name</th>    
-    <th>Creator</th>
     <th>Location</th>
     <th>Url</th>
-    <th>Distance (m)</th>
-    <th>Favorite</th> 
+    <th>Distance (m)</th>  
+    <th>Add Result</th>
     <th>View</th>
     <% if check_role('Admin') %> 
       <th></th>
@@ -18,11 +17,10 @@
 <% @routes.each do |route| %>
   <tr class="<%= cycle("odd", "even") %>">
     <td><%= route.name.to_s %></td>
-    <td><%= find_user(route.runner_id) %></td>
     <td><%= route.location %></td>
-    <td><%= route.url %></td>
+    <td><%= link_to 'View Route', route.url %></td>
     <td><%= route.distance %></td>   
-    <td class="fav"><%= link_to 'Add', new_runner_favorite_path(:runner_id => @current_user.id, :route_id => route.id) %></td>
+    <td class="add"><%= link_to 'Log a Run', new_runner_result_path(@runner,:route_id =>route.id ) %></td> 
     <td class="view"><%= link_to 'Show', route %></td>  
     <% if check_role('Admin') %>  
       <td class="edit"><%= link_to 'Edit', edit_route_path(route) %></td>

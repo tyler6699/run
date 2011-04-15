@@ -1,9 +1,12 @@
 <style>
 	#demo-frame > div.demo { padding: 10px !important; };
-	</style>
-	<script>
-	$(function() {
-		$( "#slider" ).slider({
+</style>  
+	
+	<script type="text/javascript">
+  var j = jQuery.noConflict();
+    // Code that uses jQuery's $ can follow here. 
+    j(function() {
+		j( "#slider" ).slider({
 			value:1,
 			min: 1,
 			max: 5,
@@ -28,15 +31,16 @@
             result = "Worse" 
             break
         }    
-        $( "#amount" ).val( result );                  
+        j( "#amount" ).val( result );                  
 				document.getElementById ("result_feelings").value = ui.value
 			}
 		});  
-		document.getElementById ("result_feelings").value = $( "#slider" ).slider( "value" );
-		$( "#amount" ).val( "Great" );   
-	});
-	</script>
-
+		document.getElementById ("result_feelings").value = j( "#slider" ).slider( "value" );
+		j( "#amount" ).val( "Great" );   
+	});               
+  
+  // Code that uses other library's $ can follow here.
+</script>
 
 <%= form_for([current_user,@result]) do |f| %>  
   <% if @result.errors.any? %>

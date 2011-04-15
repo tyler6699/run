@@ -1,6 +1,6 @@
 class RoutesController < RestrictedController
   def index
-    @routes = Route.all
+    @routes = Route.all    
   end
 
   def show

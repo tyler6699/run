@@ -1,7 +1,8 @@
 Runtracker::Application.routes.draw do
   resources :routes  
   resources :runners do
-      resources :results 
+      resources :results
+      resources :favorites  
   end 
   resources :sessions 
   resources :roles

@@ -1,0 +1,14 @@
+<h4>Favorite Routes</h4>
+<table>
+  <tr>
+    <th>Route</th>
+    <th>Add Result</th>
+  </tr>
+
+<% @favorites.each do |favorite| %>
+  <tr class="<%= cycle("odd", "even") %>">
+    <td><%= favorite.route_id %></td>
+    <td class="add"><%= link_to 'Log a Run', new_runner_result_path(@runner,:route_id =>favorite.route_id ) %></td>
+  </tr>
+<% end %>
+</table>      
